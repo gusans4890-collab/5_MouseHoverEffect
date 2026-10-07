@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Hover Effect</title>
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                height: 100vh;
+                background-image: linear-gradient(-225deg, #2cd8d5 0%, #c5c1ff 56%, #ffbac3 100%);
+            }
+
+            .hover_wrap {
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .hover_wrap figure {
+                width: 400px;
+                border-radius: 30px;
+                overflow: hidden;
+                position: relative;
+                box-shadow: 3px 3px 5px #292929;
+            }
+
+            .hover_wrap figure img {
+                width: 100%;
+                display: block;
+            }
+
+            .hover_wrap figure figcaption {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+
+                width: 100%;
+                padding: 20px;
+
+                background-color: #ffffffa1;
+            }
+
+            .hover_wrap figure figcaption h3 {
+                margin-bottom: 5px;
+                font-size: 24px;
+            }
+            .hover_wrap figure figcaption p {
+                font-size: 18px;
+            }
+
+            /* hover1 */
+            .hover_wrap figure.hover1 figcaption {
+                opacity: 0;
+                transition: opacity 0.33s ease-in-out;
+            }
+            .hover_wrap figure.hover1:hover figcaption {
+                opacity: 1;
+            }
+            .hover_wrap figure.hover1 img {
+                transform: scale(1, 1);
+                transition: transform 0.4s ease-in-out;
+            }
+            .hover_wrap figure.hover1:hover img {
+                transform: scale(1.2, 1.2);
+            }
+
+            /* hover2 */
+            .hover_wrap figure.hover2 figcaption {
+                bottom: -120px;
+                transition: all 0.33s cubic-bezier(0.165, 0.84, 0.44, 1);
+            }
+            .hover_wrap figure.hover2:hover figcaption {
+                bottom: 0;
+            }
+            .hover_wrap figure.hover2 img {
+                transform: translateX(0) scale(1.5);
+                transition: transform 0.33s ease-in-out;
+            }
+            .hover_wrap figure.hover2:hover img {
+                transform: translateX(30px) scale(1.5);
+            }
+
+            /* hover3 */
+            .hover_wrap figure.hover3 figcaption {
+                left: -500px;
+                transition: 0.33s ease-in-out;
+            }
+            .hover_wrap figure.hover3:hover figcaption {
+                left: 0;
+            }
+            .hover_wrap figure.hover3 img {
+                transform: translateX(0) scale(1.5);
+                transition: all 0.5s;
+            }
+            .hover_wrap figure.hover3:hover img {
+                filter: grayscale(100%);
+                transform: translateX(-30px) scale(1.5);
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="hover_wrap">
+            <figure class="hover1">
+                <img src="img/yasin-onus-vAFD0XlUkjY-unsplash.jpg" alt="" />
+                <figcaption>
+                    <h3>Mouse Hover1</h3>
+                    <p>마우스 오버 효과입니다</p>
+                </figcaption>
+            </figure>
+
+            <figure class="hover2">
+                <img src="img/daniel-j-schwarz-PVrca2EjJAY-unsplash.jpg" alt="" />
+                <figcaption>
+                    <h3>Mouse Hover2</h3>
+                    <p>마우스 오버 효과입니다</p>
+                </figcaption>
+            </figure>
+
+            <figure class="hover3">
+                <img src="img/b-s-0Z7R5usVJI8-unsplash.jpg" alt="" />
+                <figcaption>
+                    <h3>Mouse Hover3</h3>
+                    <p>마우스 오버 효과입니다</p>
+                </figcaption>
+            </figure>
+        </div>
+    </body>
+</html>

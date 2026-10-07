@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            body {
+                height: 100vh;
+                background-image: linear-gradient(-225deg, #d4ffec 0%, #57f2cc 48%, #4596fb 100%);
+            }
+            .hover_wrap {
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            figure {
+                width: 400px;
+                margin: 10px;
+                overflow: hidden;
+                position: relative;
+                background-color: #fff;
+            }
+            figure img {
+                display: block;
+                width: 100%;
+            }
+            figcaption {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                background-color: rgb(255, 255, 255);
+
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            figure:hover img {
+                opacity: 0.3;
+            }
+
+            figure.hover1 figcaption {
+                left: 120%;
+                top: 50%;
+                transition: all 0.5s;
+                transform: translate(-50%, -50%) rotate(0);
+                opacity: 0;
+            }
+            figure.hover1:hover figcaption {
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%) rotate(-360deg);
+                opacity: 1;
+            }
+            figure.hover2 figcaption {
+                left: -20%;
+                top: 50%;
+                transition: all 0.5s;
+                transform: translate(-50%, -50%) rotate(0);
+                opacity: 0;
+            }
+            figure.hover2:hover figcaption {
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%) rotate(360deg);
+                opacity: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="hover_wrap">
+            <figure class="hover1">
+                <img src="img/bastian-alexander-coleman-8CsDIpCytF0-unsplash.jpg" alt="" />
+                <figcaption>MOUSE OVER</figcaption>
+            </figure>
+
+            <figure class="hover2">
+                <img src="img/bastian-alexander-coleman-8CsDIpCytF0-unsplash.jpg" alt="" />
+                <figcaption>MOUSE OVER</figcaption>
+            </figure>
+        </div>
+    </body>
+</html>
